@@ -55,6 +55,6 @@ jobs:
           gem install awesome_bot
           awesome_bot --allow 429 --allow-redirect --allow-dupe --allow-ssl -w ipfs.io README.md || echo
       - name: Run danger
-        run: npx --yes danger ci
+        run: npm run ci:danger
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
